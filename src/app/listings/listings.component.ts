@@ -20,4 +20,8 @@ export class ListingsComponent implements OnInit {
     console.log(this.events);
   }
 
+  goToDetailPage(clickedEvent) {
+    this.router.navigate(['events', clickedEvent.$key]);
+  }
+
 }

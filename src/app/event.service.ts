@@ -13,4 +13,8 @@ export class EventService {
    getEvents() {
      return this.events;
    }
+
+   getEventByKey(eventKey: string){
+     return this.angularFire.database.object('events/' + eventKey);
+   }
 }
