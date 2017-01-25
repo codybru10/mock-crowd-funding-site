@@ -1,0 +1,12 @@
+{ "events": [{
+    "title": "Need Student Loan Money",
+    "user": "Mike Jones",
+    "description": "Student Loans are ridic, so help a brother out.",
+    "goal": 40000
+    }, {
+    "title": "Need a Vacay",
+    "user": "Yours Truly",
+    "description": "We all deserve a vacation, but I'm to broke...so help me please.",
+    "goal": 2000
+      }]
+}
