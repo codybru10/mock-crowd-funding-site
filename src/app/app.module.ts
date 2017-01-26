@@ -11,6 +11,7 @@ import { masterFirebaseConfig } from './api-keys';
 import { AngularFireModule } from 'angularfire2';
 import { EventDetailComponent } from './event-detail/event-detail.component';
 import { AdminComponent } from './admin/admin.component';
+import { EditEventComponent } from './edit-event/edit-event.component';
 
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
@@ -26,7 +27,8 @@ export const firebaseConfig = {
     ListingsComponent,
     AboutComponent,
     EventDetailComponent,
-    AdminComponent
+    AdminComponent,
+    EditEventComponent
   ],
   imports: [
     BrowserModule,

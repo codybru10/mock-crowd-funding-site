@@ -21,4 +21,12 @@ export class EventService {
    getEventByKey(eventKey: string){
      return this.angularFire.database.object('events/' + eventKey);
    }
+
+   updateEvent(localUpdatedEvent) {
+     var eventEntryInFirebase = this.getEventByKey(localUpdatedEvent.$key);
+     eventEntryInFirebase.update({title: localUpdatedEvent.title,
+                                  user: localUpdatedEvent.user,
+                                  description: localUpdatedEvent.description,
+                                  goal: localUpdatedEvent.goal});
+   }
 }

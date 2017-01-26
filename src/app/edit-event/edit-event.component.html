@@ -1,0 +1,19 @@
+<h4>Edit Event</h4>
+
+<label>New Event Title:</label>
+<input [(ngModel)]="selectedEvent.title">
+<br>
+
+<label>New Event User:</label>
+<input [(ngModel)]="selectedEvent.user">
+<br>
+
+<label>New Event Description:</label>
+<input [(ngModel)]="selectedEvent.description">
+<br>
+
+<label>New Event Goal:</label>
+<input [(ngModel)]="selectedEvent.goal">
+<br>
+
+<button (click)="beginUpdate(selectedEvent)">Update</button>
