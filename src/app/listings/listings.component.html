@@ -1,6 +1,12 @@
 <h2>List of Events</h2>
 
-<div *ngFor="let event of events | async" class="panel panel-default">
+<select (change)="onChange($event.target.value)">
+      <option value="allEvents" selected="selected">All Events</option>
+      <option value="highGoals">High Goals</option>
+      <option value="lowGoals">Low Goals</option>
+  </select>
+
+<div *ngFor="let event of events | async | goalFilter:filterByGoal" class="panel panel-default">
   <div class="panel-body">
     <h3 (click)="goToDetailPage(event)"><em>{{event.title}}</em></h3>
     <h5>{{event.user}}</h5>

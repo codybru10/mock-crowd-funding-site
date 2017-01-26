@@ -19,4 +19,8 @@ export class EditEventComponent implements OnInit {
     this.eventService.updateEvent(eventToUpdate);
   }
 
+  beginDelete(eventToDelete) {
+    this.eventService.deleteEvent(eventToDelete);
+  }
+
 }

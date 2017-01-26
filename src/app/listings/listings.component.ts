@@ -13,6 +13,7 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 export class ListingsComponent implements OnInit {
   events: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
+  filterByGoal: string = "allEvents";
 
   constructor(private router: Router, private eventService: EventService) { }
 
@@ -23,6 +24,11 @@ export class ListingsComponent implements OnInit {
 
   goToDetailPage(clickedEvent) {
     this.router.navigate(['events', clickedEvent.$key]);
+  }
+
+  onChange(optionFromMenu) {
+    this.filterByGoal = optionFromMenu;
+    console.log(this.filterByGoal);
   }
 
 }

@@ -29,4 +29,8 @@ export class EventService {
                                   description: localUpdatedEvent.description,
                                   goal: localUpdatedEvent.goal});
    }
+   deleteEvent(localDeletedEvent) {
+     var eventEntryInFirebase = this.getEventByKey(localDeletedEvent.$key);
+     eventEntryInFirebase.remove();
+   }
 }
