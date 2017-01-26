@@ -1,0 +1,24 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class='panel-title'>Add New Event</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <label>Enter Event Title</label>
+      <input #newTitle>
+    </div>
+    <div>
+      <label>Enter Event User</label>
+      <input #newUser>
+    </div>
+    <div>
+      <label>Enter Event Description</label>
+      <input #newDescription>
+    </div>
+    <div>
+      <label>Enter Event Goal</label>
+      <input #newGoal>
+    </div>
+    <button (click)="submitForm(newTitle.value, newUser.value, newDescription.value, newGoal.value); newTitle.value=''; newUser.value=''; newDescription.value=''; newGoal.value='';">Add Event</button>
+  </div>
+</div>
